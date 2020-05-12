@@ -378,7 +378,7 @@ function formatFileSize(bytes) {
     return bytes;
 }
 
-String.prototype.trim = function (char) {
+String.prototype.trim = (char)=>{
     if (char) {
         return this.replace(new RegExp('^\\'+char+'+|\\'+char+'+$', 'g'), '');
     }
@@ -399,8 +399,31 @@ function markdown(el, data){
     }
 }
 
+// 显示样式更改
+function thumb() {
+    if ($('.mdui-fab i').text() == "apps") {
+        $('.mdui-fab i').text("format_list_bulleted");
+        $('.nexmoe-item').removeClass('thumb');
+        $('.nexmoe-item .mdui-icon').show();
+        $('.nexmoe-item .mdui-list-item').css("background", "");
+    } else {
+        $('.mdui-fab i').text("apps");
+        $('.nexmoe-item').addClass('thumb');
+        $('.mdui-col-xs-12 i.mdui-icon').each(function () {
+            if ($(this).text() == "image" || $(this).text() == "ondemand_video") {
+                var href = $(this).parent().parent().attr('href');
+                var thumb = (href.indexOf('?') == -1) ? '?t=220' : '&t=220';
+                $(this).hide();
+                $(this).parent().parent().parent().css("background", "url(" + href + thumb +
+                    ")  no-repeat center top");
+            }
+        });
+    }
+
+}
+
 // 监听回退事件
-window.onpopstate = function(){
+window.onpopstate = ()=>{
     var path = window.location.pathname;
     render(path);
 }
@@ -409,14 +432,14 @@ window.onpopstate = function(){
 $(function(){
     init();
     var path = window.location.pathname;
-    $("body").on("click",'.folder',function(){
+    $("body").on("click",'.folder',()=>{
         var url = $(this).attr('href');
         history.pushState(null, null, url);
         render(url);
         return false;
     });
 
-    $("body").on("click",'.view',function(){
+    $("body").on("click",'.view',()=>{
         var url = $(this).attr('href');
         history.pushState(null, null, url);
         render(url);
