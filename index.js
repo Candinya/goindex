@@ -1,13 +1,13 @@
-// https://github.com/donwa/goindex/blob/master/使用及免责协议.md
+// https://github.com/Candinya/goindex/blob/master/使用及免责协议.md
 
 var authConfig = {
     "siteName": "GoIndex", // 网站名称
-    "root_pass": "index",  // 根目录密码，优先于.password
+    "root_pass": "",  // 根目录密码，优先于.password
     "version" : "1.0.6", // 程序版本
-    "theme" : "material", // material  classic 
-    "client_id": "202264815644.apps.googleusercontent.com",
-    "client_secret": "X4Z3ca8xfWDb1Voo-F9a7ZxJ",
-    "refresh_token": "", // 授权 token
+    "theme" : "material", // material  classic nexmoe
+    "client_id": "", // 你的应用ID
+    "client_secret": "", // 你的应用机密
+    "refresh_token": "", // 授权token
     "root": "root" // 根目录ID
 };
 
@@ -20,7 +20,7 @@ var html = `
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
   <title>${authConfig.siteName}</title>
-  <script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js,gh/donwa/goindex@${authConfig.version}/themes/${authConfig.theme}/app.js"></script>
+  <script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js,gh/Candinya/goindex@${authConfig.version}/themes/${authConfig.theme}/app.min.js"></script>
 </head>
 <body>
 </body>
