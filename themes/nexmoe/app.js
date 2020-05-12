@@ -9,13 +9,15 @@ function init(){
     document.siteName = $('title').html();
     $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue");
     var html = `
-<div class="mdui-container-fluid">
-    <div id="nav" class="mdui-toolbar nexmoe-item">
+<div class="mdui-container">
+    <div class="mdui-container-fluid">
+        <div id="nav" class="mdui-toolbar nexmoe-item">
+        </div>
     </div>
-</div>
-<div class="mdui-container-fluid"> 
-    <style>.thumb .th {display:none;}.thumb .mdui-text-right {display:none;}.thumb .mdui-list-item a,.thumb .mdui-list-item {width:217px;height:230px;float:left;margin:10px 10px !important;}.thumb .mdui-col-xs-12,.thumb .mdui-col-sm-7 {width:100% !important;height:230px;}.thumb .mdui-list-item .mdui-icon {font-size:100px;display:block;margin-top:40px;color:#7ab5ef;}.thumb .mdui-list-item span {float:left;display:block;text-align:center;width:100%;position:absolute;top:180px;}</style>
-    <div id="content" class="nexmoe-item"></div>
+    <div class="mdui-container-fluid"> 
+        <style>.thumb .th {display:none;}.thumb .mdui-text-right {display:none;}.thumb .mdui-list-item a,.thumb .mdui-list-item {width:217px;height:230px;float:left;margin:10px 10px !important;}.thumb .mdui-col-xs-12,.thumb .mdui-col-sm-7 {width:100% !important;height:230px;}.thumb .mdui-list-item .mdui-icon {font-size:100px;display:block;margin-top:40px;color:#7ab5ef;}.thumb .mdui-list-item span {float:left;display:block;text-align:center;width:100%;position:absolute;top:180px;}</style>
+        <div id="content" class="nexmoe-item"></div>
+    </div>
 </div>
 	`;
     $('body').html(html);
