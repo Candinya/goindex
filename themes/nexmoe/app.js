@@ -378,7 +378,7 @@ function formatFileSize(bytes) {
     return bytes;
 }
 
-String.prototype.trim = (char)=>{
+String.prototype.trim = function (char) {
     if (char) {
         return this.replace(new RegExp('^\\'+char+'+|\\'+char+'+$', 'g'), '');
     }
