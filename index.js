@@ -3,7 +3,7 @@
 var authConfig = {
     "siteName": "GoIndex", // 网站名称
     "root_pass": "",  // 根目录密码，优先于.password
-    "version" : "1.0.6", // 程序版本
+    "version" : "1.1", // 程序版本
     "theme" : "material", // material  classic nexmoe
     "client_id": "", // 你的应用ID
     "client_secret": "", // 你的应用机密
