@@ -10,6 +10,7 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 ## Demo  
 material: [https://index.gd.workers.dev/](https://index.gd.workers.dev/)  
 classic: [https://indexc.gd.workers.dev/](https://indexc.gd.workers.dev/)  
+nexmoe: [https://gdisk.lcy.moe](https://gdisk.lcy.moe)
 
 ## Deployment  
 1.Install `rclone` software locally  
