@@ -1,14 +1,25 @@
 // 在head 中 加载 必要静态
-document.write('<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">');
+// document.write('<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">');
+const mduiStyle = document.createElement('link');
+mduiStyle.rel = 'stylesheet';
+mduiStyle.type = 'text/css';
+mduiStyle.media = 'all';
+mduiStyle.href = 'https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css';
+document.head.appendChild(mduiStyle);
+
 // markdown支持
-document.write('<script src="//cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js"></script>');
-document.write('<style>body{background-color:#f2f5fa;padding-bottom:60px;background-position:center bottom;background-repeat:no-repeat;background-attachment:fixed}.nexmoe-item{margin:20px -8px 0!important;padding:15px!important;border-radius:5px;background-color:#fff;-webkit-box-shadow:0 .5em 3em rgba(161,177,204,.4);box-shadow:0 .5em 3em rgba(161,177,204,.4);background-color:#fff}.mdui-img-fluid,.mdui-video-fluid{border-radius:5px;border:1px solid #eee}.mdui-list{padding:0}.mdui-list-item{margin:0!important;border-radius:5px;padding:0 10px 0 5px!important;border:1px solid #eee;margin-bottom:10px!important}.mdui-list-item:last-child{margin-bottom:0!important}.mdui-list-item:first-child{border:none}.mdui-toolbar{width:auto;margin-top:60px!important}.mdui-appbar .mdui-toolbar{height:56px;font-size:16px}.mdui-toolbar>*{padding:0 6px;margin:0 2px;opacity:.5}.mdui-toolbar>.mdui-typo-headline{padding:0 16px 0 0}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.mdui-typo-headline,a.active{opacity:1}.mdui-container{max-width:980px}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:48px}.mdui-toolbar>a{padding:0 16px;line-height:30px;border-radius:30px;border:1px solid #eee}.mdui-toolbar>a:last-child{opacity:1;background-color:#1e89f2;color:#ffff}@media screen and (max-width:980px){.mdui-list-item .mdui-text-right{display:none}.mdui-container{width:100%!important;margin:0}.mdui-toolbar>*{display:none}.mdui-toolbar>a:last-child,.mdui-toolbar>.mdui-typo-headline,.mdui-toolbar>i:first-child{display:block}}</style>');
+// document.write('<script src="//cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js"></script>');
+const markdownSupport = document.createElement('script');
+markdownSupport.src = 'https://cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js';
+
+// document.write('<style>body{background-color:#f2f5fa;padding-bottom:60px;background-position:center bottom;background-repeat:no-repeat;background-attachment:fixed}.nexmoe-item{margin:20px -8px 0!important;padding:15px!important;border-radius:5px;background-color:#fff;-webkit-box-shadow:0 .5em 3em rgba(161,177,204,.4);box-shadow:0 .5em 3em rgba(161,177,204,.4);background-color:#fff}.mdui-img-fluid,.mdui-video-fluid{border-radius:5px;border:1px solid #eee}.mdui-list{padding:0}.mdui-list-item{margin:0!important;border-radius:5px;padding:0 10px 0 5px!important;border:1px solid #eee;margin-bottom:10px!important}.mdui-list-item:last-child{margin-bottom:0!important}.mdui-list-item:first-child{border:none}.mdui-toolbar{width:auto;margin-top:60px!important}.mdui-appbar .mdui-toolbar{height:56px;font-size:16px}.mdui-toolbar>*{padding:0 6px;margin:0 2px;opacity:.5}.mdui-toolbar>.mdui-typo-headline{padding:0 16px 0 0}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.mdui-typo-headline,a.active{opacity:1}.mdui-container{max-width:980px}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:48px}.mdui-toolbar>a{padding:0 16px;line-height:30px;border-radius:30px;border:1px solid #eee}.mdui-toolbar>a:last-child{opacity:1;background-color:#1e89f2;color:#ffff}@media screen and (max-width:980px){.mdui-list-item .mdui-text-right{display:none}.mdui-container{width:100%!important;margin:0}.mdui-toolbar>*{display:none}.mdui-toolbar>a:last-child,.mdui-toolbar>.mdui-typo-headline,.mdui-toolbar>i:first-child{display:block}}</style>');
+document.head.innerHTML += '<style>body{background-color:#f2f5fa;padding-bottom:60px;background-position:center bottom;background-repeat:no-repeat;background-attachment:fixed}.nexmoe-item{margin:20px -8px 0!important;padding:15px!important;border-radius:5px;background-color:#fff;-webkit-box-shadow:0 .5em 3em rgba(161,177,204,.4);box-shadow:0 .5em 3em rgba(161,177,204,.4);background-color:#fff}.mdui-img-fluid,.mdui-video-fluid{border-radius:5px;border:1px solid #eee}.mdui-list{padding:0}.mdui-list-item{margin:0!important;border-radius:5px;padding:0 10px 0 5px!important;border:1px solid #eee;margin-bottom:10px!important}.mdui-list-item:last-child{margin-bottom:0!important}.mdui-list-item:first-child{border:none}.mdui-toolbar{width:auto;margin-top:60px!important}.mdui-appbar .mdui-toolbar{height:56px;font-size:16px}.mdui-toolbar>*{padding:0 6px;margin:0 2px;opacity:.5}.mdui-toolbar>.mdui-typo-headline{padding:0 16px 0 0}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.mdui-typo-headline,a.active{opacity:1}.mdui-container{max-width:980px}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:48px}.mdui-toolbar>a{padding:0 16px;line-height:30px;border-radius:30px;border:1px solid #eee}.mdui-toolbar>a:last-child{opacity:1;background-color:#1e89f2;color:#ffff}@media screen and (max-width:980px){.mdui-list-item .mdui-text-right{display:none}.mdui-container{width:100%!important;margin:0}.mdui-toolbar>*{display:none}.mdui-toolbar>a:last-child,.mdui-toolbar>.mdui-typo-headline,.mdui-toolbar>i:first-child{display:block}}</style>';
 
 // 初始化页面，并载入必要资源
 function init(){
     document.siteName = $('title').html();
     $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue");
-    var html = `
+    const html = `
 <div class="mdui-container">
     <div class="mdui-container-fluid">
         <div id="nav" class="mdui-toolbar nexmoe-item">
@@ -29,7 +40,7 @@ function render(path){
 	}
     title(path);
     nav(path);
-    if(path.substr(-1) == '/'){
+    if(path.substr(-1) === '/'){
     	list(path);
     }else{
 	    file(path);
@@ -45,16 +56,15 @@ function title(path){
 
 // 渲染导航栏
 function nav(path){
-    var html = "";
+    let html = "";
     html += `<a href="/">${document.siteName}</a>`;
-    var arr = path.trim('/').split('/');
-    var p = '/';
-    if(arr.length > 0){
-        for(i in arr){
-            var n = arr[i];
-            n = decodeURI(n);
+    const arr = path.trim('/').split('/');
+    let p = '/';
+    if (arr.length > 0) {
+        for (i in arr) {
+            const n = decodeURI(arr[i]);
             p += n+'/';
-            if(n == ''){
+            if (n === '') {
                 break;
             }
             html += `<i class="mdui-icon material-icons mdui-icon-dark" style="margin:0;">chevron_right</i><a href="${p}">${n}</a>`;
@@ -65,7 +75,7 @@ function nav(path){
 
 // 渲染文件列表
 function list(path){
-	var content = `
+	const content = `
 	<div id="head_md" class="mdui-typo" style="display:none;padding: 20px 0;"></div>
 
     <div class="mdui-row">
@@ -86,14 +96,14 @@ function list(path){
 	`;
 	$('#content').html(content);
 	
-    var password = localStorage.getItem('password'+path);
+    const password = localStorage.getItem('password'+path);
     $('#list').html(`<div class="mdui-progress"><div class="mdui-progress-indeterminate"></div></div>`);
     $('#readme_md').hide().html('');
     $('#head_md').hide().html('');
-    $.post(path,'{"password":"'+password+'"}', function(data,status){
-        var obj = jQuery.parseJSON(data);
-        if(typeof obj != 'null' && obj.hasOwnProperty('error') && obj.error.code == '401'){
-            var pass = prompt("目录加密, 请输入密码","");
+    $.post(path,'{"password":"'+password+'"}', function(data, status){
+        const obj = jQuery.parseJSON(data);
+        if(typeof obj != 'null' && obj.hasOwnProperty('error') && obj.error.code === '401'){
+            const pass = prompt("目录加密, 请输入密码","");
             localStorage.setItem('password'+path, pass);
             if(pass != null && pass != ""){
                 list(path);
@@ -109,15 +119,15 @@ function list(path){
 function list_files(path,files){
     html = "";
     for(i in files){
-        var item = files[i];
-        var p = path+item.name+'/';
-        if(item['size']==undefined){
+        let item = files[i];
+        const p = path+item.name+'/';
+        if(item['size'] === undefined){
             item['size'] = "";
         }
 
         item['modifiedTime'] = utc2beijing(item['modifiedTime']);
         item['size'] = formatFileSize(item['size']);
-        if(item['mimeType'] == 'application/vnd.google-apps.folder'){
+        if(item['mimeType'] === 'application/vnd.google-apps.folder'){
             html +=`<li class="mdui-list-item mdui-ripple"><a href="${p}" class="folder">
 	            <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
 	            <i class="mdui-icon material-icons">folder_open</i>
@@ -128,19 +138,19 @@ function list_files(path,files){
 	            </a>
 	        </li>`;
         }else{
-            var p = path+item.name;
-            var c = "file";
-            if(item.name == "README.md"){
+            let p = path+item.name;
+            let c = "file";
+            if(item.name === "README.md"){
                  get_file(p, item, function(data){
                     markdown("#readme_md",data);
                 });
             }
-            if(item.name == "HEAD.md"){
+            if(item.name === "HEAD.md"){
 	            get_file(p, item, function(data){
                     markdown("#head_md",data);
                 });
             }
-            var ext = p.split('.').pop();
+            const ext = p.split('.').pop();
             if("|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|gif|m4a|mp3|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${ext.toLowerCase()}|`) >= 0){
 	            p += "?a=view";
 	            c += " view";
@@ -161,8 +171,8 @@ function list_files(path,files){
 
 
 function get_file(path, file, callback){
-	var key = "file_path_"+path+file['modifiedTime'];
-	var data = localStorage.getItem(key);
+	const key = "file_path_" + path + file['modifiedTime'];
+	const data = localStorage.getItem(key);
 	if(data != undefined){
 		return callback(data);
 	}else{
@@ -177,8 +187,8 @@ function get_file(path, file, callback){
 
 // 文件展示 ?a=view
 function file(path){
-	var name = path.split('/').pop();
-	var ext = name.split('.').pop().toLowerCase().replace(`?a=view`,"");
+	const name = path.split('/').pop();
+	const ext = name.split('.').pop().toLowerCase().replace(`?a=view`,"");
 	if("|html|php|css|go|java|js|json|txt|sh|md|".indexOf(`|${ext}|`) >= 0){
 		return file_code(path);
 	}
@@ -202,7 +212,7 @@ function file(path){
 
 // 文件展示 |html|php|css|go|java|js|json|txt|sh|md|
 function file_code(path){
-	var type = {
+	const type = {
 		"html":"html",
 		"php":"php",
 		"css":"css",
@@ -214,10 +224,10 @@ function file_code(path){
 		"sh":"sh",
 		"md":"Markdown",	
 	};
-	var name = path.split('/').pop();
-	var ext = name.split('.').pop();
-	var href = window.location.origin + path;
-	var content = `
+	const name = path.split('/').pop();
+	const ext = name.split('.').pop();
+	const href = window.location.origin + path;
+	const content = `
 <div class="mdui-container">
 <pre id="editor" ></pre>
 </div>
@@ -234,11 +244,11 @@ function file_code(path){
 	
 	$.get(path, function(data){
 		$('#editor').html($('<div/>').text(data).html());
-		var code_type = "Text";
+		let code_type = "Text";
 		if(type[ext] != undefined ){
 			code_type = type[ext];
 		}
-		var editor = ace.edit("editor");
+		let editor = ace.edit("editor");
 	    editor.setTheme("ace/theme/ambiance");
 	    editor.setFontSize(18);
 	    editor.session.setMode("ace/mode/"+code_type);
@@ -255,12 +265,12 @@ function file_code(path){
 
 // 文件展示 视频 |mp4|webm|avi|
 function file_video(path){
-	var url = window.location.origin + path;
-	var playBtn = `<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="potplayer://${url}"><i class="mdui-icon material-icons">&#xe038;</i>在 potplayer 中播放</a>`;
+	const url = window.location.origin + path;
+	const playBtn = `<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="potplayer://${url}"><i class="mdui-icon material-icons">&#xe038;</i>在 potplayer 中播放</a>`;
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
 	    playBtn = `	<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end"><i class="mdui-icon material-icons">&#xe039;</i>在mxplayer中播放</a>`;
 	}
-	var content = `
+	const content = `
 <div class="mdui-container-fluid">
 	<br>
 	<video class="mdui-video-fluid mdui-center" preload controls>
@@ -284,8 +294,8 @@ function file_video(path){
 
 // 文件展示 音频 |mp3|m4a|wav|ogg|
 function file_audio(path){
-	var url = window.location.origin + path;
-	var content = `
+	const url = window.location.origin + path;
+	const content = `
 <div class="mdui-container-fluid">
 	<br>
 	<audio class="mdui-center" preload controls>
@@ -310,8 +320,8 @@ function file_audio(path){
 
 // 图片展示
 function file_image(path){
-	var url = window.location.origin + path;
-	var content = `
+	const url = window.location.origin + path;
+	const content = `
 <div class="mdui-container-fluid">
 	<br>
 	<img class="mdui-img-fluid" src="${url}"/>
@@ -339,11 +349,11 @@ function file_image(path){
 //时间转换
 function utc2beijing(utc_datetime) {
     // 转为正常的时间格式 年-月-日 时:分:秒
-    var T_pos = utc_datetime.indexOf('T');
-    var Z_pos = utc_datetime.indexOf('Z');
-    var year_month_day = utc_datetime.substr(0,T_pos);
-    var hour_minute_second = utc_datetime.substr(T_pos+1,Z_pos-T_pos-1);
-    var new_datetime = year_month_day+" "+hour_minute_second; // 2017-03-31 08:02:06
+    const T_pos = utc_datetime.indexOf('T');
+    const Z_pos = utc_datetime.indexOf('Z');
+    const year_month_day = utc_datetime.substr(0,T_pos);
+    const hour_minute_second = utc_datetime.substr(T_pos+1,Z_pos-T_pos-1);
+    const new_datetime = year_month_day+" "+hour_minute_second; // 2017-03-31 08:02:06
 
     // 处理成为时间戳
     timestamp = new Date(Date.parse(new_datetime));
@@ -351,16 +361,16 @@ function utc2beijing(utc_datetime) {
     timestamp = timestamp/1000;
 
     // 增加8个小时，北京时间比utc时间多八个时区
-    var unixtimestamp = timestamp+8*60*60;
+    const utcP8Time = timestamp + 8 * 60 * 60;
 
     // 时间戳转为时间
-    var unixtimestamp = new Date(unixtimestamp*1000);
-    var year = 1900 + unixtimestamp.getYear();
-    var month = "0" + (unixtimestamp.getMonth() + 1);
-    var date = "0" + unixtimestamp.getDate();
-    var hour = "0" + unixtimestamp.getHours();
-    var minute = "0" + unixtimestamp.getMinutes();
-    var second = "0" + unixtimestamp.getSeconds();
+    const unixtimestamp = new Date(utcP8Time*1000);
+    const year = 1900 + unixtimestamp.getYear();
+    const month = "0" + (unixtimestamp.getMonth() + 1);
+    const date = "0" + unixtimestamp.getDate();
+    const hour = "0" + unixtimestamp.getHours();
+    const minute = "0" + unixtimestamp.getMinutes();
+    const second = "0" + unixtimestamp.getSeconds();
     return year + "-" + month.substring(month.length-2, month.length)  + "-" + date.substring(date.length-2, date.length)
         + " " + hour.substring(hour.length-2, hour.length) + ":"
         + minute.substring(minute.length-2, minute.length) + ":"
@@ -369,11 +379,11 @@ function utc2beijing(utc_datetime) {
 
 // bytes自适应转换到KB,MB,GB
 function formatFileSize(bytes) {
-    if (bytes>=1000000000) {bytes=(bytes/1000000000).toFixed(2)+' GB';}
-    else if (bytes>=1000000)    {bytes=(bytes/1000000).toFixed(2)+' MB';}
-    else if (bytes>=1000)       {bytes=(bytes/1000).toFixed(2)+' KB';}
-    else if (bytes>1)           {bytes=bytes+' bytes';}
-    else if (bytes==1)          {bytes=bytes+' byte';}
+    if (bytes >= 1000000000)    {bytes=(bytes/1000000000).toFixed(2)+' GB';}
+    else if (bytes >= 1000000)  {bytes=(bytes/1000000).toFixed(2)+' MB';}
+    else if (bytes >= 1000)     {bytes=(bytes/1000).toFixed(2)+' KB';}
+    else if (bytes >  1)        {bytes=bytes+' bytes';}
+    else if (bytes === 1)       {bytes=bytes+' byte';}
     else                        {bytes='';}
     return bytes;
 }
@@ -388,20 +398,20 @@ String.prototype.trim = function (char) {
 
 // README.md HEAD.md 支持
 function markdown(el, data){
-    if(window.md == undefined){
+    if(window.md === undefined){
         //$.getScript('https://cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js',function(){
         window.md = window.markdownit();
         markdown(el, data);
         //});
     }else{
-        var html = md.render(data);
+        const html = md.render(data);
         $(el).show().html(html);
     }
 }
 
 // 显示样式更改
 function thumb() {
-    if ($('.mdui-fab i').text() == "apps") {
+    if ($('.mdui-fab i').text() === "apps") {
         $('.mdui-fab i').text("format_list_bulleted");
         $('.nexmoe-item').removeClass('thumb');
         $('.nexmoe-item .mdui-icon').show();
@@ -410,12 +420,12 @@ function thumb() {
         $('.mdui-fab i').text("apps");
         $('.nexmoe-item').addClass('thumb');
         $('.mdui-col-xs-12 i.mdui-icon').each(function () {
-            if ($(this).text() == "image" || $(this).text() == "ondemand_video") {
-                var href = $(this).parent().parent().attr('href');
-                var thumb = (href.indexOf('?') == -1) ? '?t=220' : '&t=220';
+            if ($(this).text() === "image" || $(this).text() === "ondemand_video") {
+                const href = $(this).parent().parent().attr('href');
+                const thumb = (href.indexOf('?') === -1) ? '?t=220' : '&t=220';
                 $(this).hide();
-                $(this).parent().parent().parent().css("background", "url(" + href + thumb +
-                    ")  no-repeat center top");
+                $(this).parent().parent().parent()
+                    .css("background", "url(" + href + thumb + ")  no-repeat center top");
             }
         });
     }
@@ -424,27 +434,25 @@ function thumb() {
 
 // 监听回退事件
 window.onpopstate = ()=>{
-    var path = window.location.pathname;
+    const path = window.location.pathname;
     render(path);
 }
 
 
 $(function(){
     init();
-    var path = window.location.pathname;
-    $("body").on("click",'.folder',()=>{
-        var url = $(this).attr('href');
-        history.pushState(null, null, url);
-        render(url);
-        return false;
-    });
 
-    $("body").on("click",'.view',()=>{
-        var url = $(this).attr('href');
+    function pjax() {
+        const url = $(this).attr('href');
         history.pushState(null, null, url);
         render(url);
         return false;
-    });
+    }
+
+    $("body").on("click",'.folder', pjax);
+    $("body").on("click",'.view', pjax);
+    $("body").on("click",'#nav>a', pjax);
     
+    const path = window.location.pathname;
     render(path);
 });
