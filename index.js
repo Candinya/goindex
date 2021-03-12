@@ -1,14 +1,15 @@
 // https://github.com/Candinya/goindex/blob/master/使用及免责协议.md
 
 const authConfig = {
-    "siteName": "GoIndex", // 网站名称
-    "root_pass": "",  // 根目录密码，优先于.password
-    "version" : "1.2.0", // 程序版本
-    "theme" : "nexmoe", // material classic nexmoe
-    "client_id": "", // 你的应用ID
-    "client_secret": "", // 你的应用机密
-    "refresh_token": "", // 授权token
-    "root": "root" // 根目录ID
+    siteName: "GoIndex", // 网站名称
+    root_pass: "",  // 根目录密码，优先于.password
+    version : "1.2.0", // 程序版本
+    theme : "nexmoe", // material classic nexmoe
+    client_id: "", // 你的应用ID
+    client_secret: "", // 你的应用机密
+    refresh_token: "", // 授权token
+    root: "root", // 根目录ID
+    favicon: "https://candinya.com/images/favicon.webp",
 };
 
 let gd;
@@ -20,6 +21,7 @@ const html = `
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
   <title>${authConfig.siteName}</title>
+  <link rel="icon" href="${authConfig.favicon}">
   <script defer src="//cdn.jsdelivr.net/gh/jquery/jquery@3.6/dist/jquery.min.js"></script>
   <script defer src="//cdn.jsdelivr.net/gh/Candinya/goindex@${authConfig.version}/themes/${authConfig.theme}/app.min.js"></script>
 </head>
@@ -37,7 +39,7 @@ addEventListener('fetch', event => {
  * @param {Request} request
  */
 async function handleRequest(request) {
-    if(gd == undefined){
+    if (gd === undefined){
       gd = new googleDrive(authConfig);
     }
 
